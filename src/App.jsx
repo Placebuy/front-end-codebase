@@ -2,7 +2,7 @@
 import { createBrowserRouter, createRoutesFromElements, Route, RouterProvider } from 'react-router-dom'
 
 import RootLayout from './layouts/RootLayout'
-import Home from './pages/Home'
+import Home from './pages/HomeEnv/Home'
 import Signup from './pages/Auth/Signup'
 import Login from './pages/Auth/Login'
 import OTP from './pages/Auth/OTP';

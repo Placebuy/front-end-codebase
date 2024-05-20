@@ -45,7 +45,7 @@ function MoreDetails() {
             placeholder="Full Name"
             padding={4}
             fontSize={{ lg: "lg", md: "md", sm: "sm" }}
-            mb={10}
+            mb={8}
           />
 
           <Input
