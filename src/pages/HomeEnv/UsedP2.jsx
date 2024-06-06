@@ -74,16 +74,6 @@ function UsedP2() {
         );
       })}
         </SimpleGrid>
-        
-        {/* <Divider
-          orientation='horizontal'
-          width='50%'
-          borderBottomWidth={10}
-          borderRightRadius={50}
-          borderColor='#E3563A'
-          mt={10}
-          mb={20}
-        /> */}
       </Box>
     </>
   )

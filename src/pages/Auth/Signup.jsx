@@ -1,6 +1,7 @@
 import React from 'react';
 import { Box, Text, FormControl, Input, Button, Image } from '@chakra-ui/react';
 import 'bootstrap-icons/font/bootstrap-icons.css';
+import { Link } from 'react-router-dom';
 
 function Signup() {
   return (
@@ -54,15 +55,18 @@ function Signup() {
             mb={4}
             fontSize={{ lg: "lg", md: "md", sm: "sm" }}
           />
-          <Button
-            colorScheme="orange"
-            width="100%"
-            padding={4}
-            mt={4}
-            fontSize="xl"
-          >
-            Sign Up
-          </Button>
+
+          <Link to='/Login'>
+            <Button
+              colorScheme="orange"
+              width="100%"
+              padding={4}
+              mt={4}
+              fontSize="xl"
+            >  
+              Sign Up
+            </Button>
+          </Link>
         </FormControl>
 
         <Box width="80%" textAlign="center">
@@ -97,7 +101,11 @@ function Signup() {
             fontWeight="bold"
             mt={12}
           >
-            Already have an account? <a href="/signin" style={{ color: 'orange' }}>Sign in</a>
+            Already have an account? <a href="/signin" style={{ color: 'orange' }}>
+              <Link to='/Login'>
+                Sign in
+              </Link>
+              </a>
           </Text>
         </Box>
       </Box>
