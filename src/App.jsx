@@ -1,8 +1,10 @@
 // import { useState } from 'react'
 import { createBrowserRouter, createRoutesFromElements, Route, RouterProvider } from 'react-router-dom'
+import 'bootstrap/dist/css/bootstrap.css';
+import 'bootstrap-icons/font/bootstrap-icons.css';
 
 import RootLayout from './layouts/RootLayout'
-import Home from './pages/HomeEnv/Home'
+import Home from './pages/HomeEnv/Index'
 import Signup from './pages/Auth/Signup'
 import Login from './pages/Auth/Login'
 import OTP from './pages/Auth/OTP';
