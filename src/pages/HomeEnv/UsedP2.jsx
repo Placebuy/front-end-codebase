@@ -69,10 +69,12 @@ function UsedP2() {
                   </Button>
                 </ButtonGroup>
               </Box>
+              
             </Box>
           </Box>
         );
       })}
+          
         </SimpleGrid>
       </Box>
     </>
