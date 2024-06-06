@@ -1,6 +1,7 @@
 import React from 'react'
 import { Box, Text, FormControl, Input, Button, Image, Checkbox } from '@chakra-ui/react';
 import 'bootstrap-icons/font/bootstrap-icons.css';
+import { Link } from 'react-router-dom';
 
 function Forgot() {
   return (
@@ -63,10 +64,6 @@ function Forgot() {
             mb={4}
             fontSize={{ lg: "lg", md: "md", sm: "sm" }}
           />
-
-          <Text>
-            <a href='/'>Forgot Your Password?</a>
-          </Text>
           
           <Checkbox
             size='md'
@@ -120,7 +117,12 @@ function Forgot() {
             fontWeight="bold"
             mt={12}
           >
-            Already have an account? Sign Up
+            Already have an account?
+            <Link to='/Login'>
+              
+            Sign Up
+            </Link>
+            
           </Text>
         </Box>
       </Box>

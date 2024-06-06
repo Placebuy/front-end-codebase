@@ -6,13 +6,13 @@ import {
   Input,
   InputRightElement,
   Button,
-  Link,
   Text,
   useMediaQuery,
 } from '@chakra-ui/react';
 import React from 'react';
 import 'bootstrap/dist/css/bootstrap.css';
 import 'bootstrap-icons/font/bootstrap-icons.css';
+import { Link } from 'react-router-dom';
 
 const Nav = () => {
   const [isLargerThan768] = useMediaQuery('(min-width: 768px)');
@@ -28,12 +28,15 @@ const Nav = () => {
         ml={isLargerThan768 ? 60 : 0}
         mb={isLargerThan768 ? 0 : 3}
       >
-        <a href="/HomeEnv/Home.jsx">
-        <Image
+        <Link to='/'>
+          <Image
           src='/Image/Placebuy_Logo.png'
           width={'50px'}
         />
-      </a>
+        
+        </Link>  
+        
+      
 
       </Box>
       
@@ -79,7 +82,7 @@ const Nav = () => {
         
         <Text mt={3}>
           <Link
-            href="#"
+            to='/Login'
             color="teal.500"
             _hover={{ textDecoration: 'underline' }}
           >

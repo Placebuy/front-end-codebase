@@ -1,6 +1,7 @@
 import React from 'react'
 import { Box, Text, FormControl, Input, Button, Image } from '@chakra-ui/react';
 import 'bootstrap-icons/font/bootstrap-icons.css';
+import { Link } from 'react-router-dom';
 
 
 function login() {
@@ -55,6 +56,13 @@ function login() {
             mb={4}
             fontSize={{ lg: "lg", md: "md", sm: "sm" }}
           />
+          
+          <Link to='/NewpassOTP'>
+            Forgot Your Password?
+          </Link>
+          {/* <Text>
+            <a href='/'></a>
+          </Text> */}
           <Button
             colorScheme="orange"
             width="100%"
@@ -67,38 +75,17 @@ function login() {
         </FormControl>
 
         <Box width="80%" textAlign="center">
-          {/* <Text
-            fontSize="sm"
-            mt={6}
-            mb={6}
-            fontWeight="bold"
-          >
-            Alternatively
-          </Text>
-
-          <Button
-            colorScheme="gray"
-            padding={6}
-            width="100%"
-            display="flex"
-            alignItems="center"
-            fontSize={{ lg: "lg", md: "md", sm: "sm" }}
-            mb={4}
-          >
-            <Image
-              src="/public/Image/svg/google-color.svg"
-              width={6}
-              mr={2}
-            />
-            Sign Up with Google
-          </Button> */}
 
           <Text
             fontSize={{ lg: "lg", sm: "md" }}
             fontWeight="bold"
             mt={12}
           >
-            Don't have an account? <a href="/signin" style={{ color: 'orange' }}>Sign Up</a>
+            Don't have an account? <a href="/signin" style={{ color: 'orange' }}>
+              <Link to='/Signup'>
+                Sign Up
+              </Link>
+              </a>
           </Text>
         </Box>
       </Box>
