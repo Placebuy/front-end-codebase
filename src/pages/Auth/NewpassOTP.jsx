@@ -73,9 +73,8 @@ function NewpassOTP() {
             <Text as='p'>
               Didn’t receive any mail? <a href="#" style={{ color: 'orange' }}>Resend</a>
             </Text>
-
-            {/* <Link to='/Newpass'> */}
-              <Button
+              
+            <Button
               colorScheme="orange"
               width="100%"
               padding={4}
@@ -86,7 +85,6 @@ function NewpassOTP() {
               Continue
             </Button>
             
-            {/* </Link> */}
             
           </VStack>
         </form>
