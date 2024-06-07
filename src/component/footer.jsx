@@ -10,7 +10,6 @@ function Footer() {
       <Box
         mt={10}
         backgroundColor='black'
-        // height={{ lg: "308px", md: "200px", sm: "180px" }}
         width="100%"
       >
 
@@ -34,7 +33,6 @@ function Footer() {
             <Text as='p'
               color='white'
               mt={10}
-              // w={{lg: '80%', sm:'100%'}}
           >
             An online platform where higher institute students in Nigeria can sell their products both used and brand-new products. This platform connects buyers and sellers of higher institutes.
           </Text>
@@ -84,8 +82,6 @@ function Footer() {
 
 
         </Box>
-        
-
 
       </Box>
       

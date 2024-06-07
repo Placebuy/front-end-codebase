@@ -57,9 +57,11 @@ function UsedP2() {
                 <Text as='p' mb={2} fontSize={{ lg: '15px', sm: '15px' }}>
                   {text}
                 </Text>
+                
                 <Text as='p'>
                   {text2}
                 </Text>
+
                 <ButtonGroup display="flex" justifyContent='space-between' gap={3} mt={2}>
                   <Button colorScheme='orange'>
                     {Button1}

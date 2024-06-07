@@ -19,9 +19,6 @@ import ErrorMess from './pages/ErrorMess';
 
 
 
-
-
-
 const router = createBrowserRouter(
   createRoutesFromElements(
     <Route path="/" element={<RootLayout />}
