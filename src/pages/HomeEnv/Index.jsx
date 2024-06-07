@@ -1,15 +1,13 @@
-import React from 'react'
+import React from 'react';
 import Nav from '../../component/nav';
 import Hero from './Hero';
-import Sidebarnav from '../../component/sidebarnav';
+// import Sidebarnav from '../../component/sidebarnav';
 import NewLising from './NewLising';
 import UsedP from './UsedP';
 import UsedP2 from './UsedP2';
 import AfterUse from './AfterUse';
 import Footer from '../../component/Footer';
-// import 'bootstrap-icons/font/bootstrap-icons.css';
 import DownToTop from '../../component/DownToTop';
-
 
 function Home() {
   return (
@@ -23,11 +21,10 @@ function Home() {
       <UsedP2 />
       <AfterUse />
       
-      <DownToTop/>
-
-      <Footer/>
+      <DownToTop />
+      <Footer />
     </>
-  )
+  );
 }
 
-export default Home
+export default Home;
