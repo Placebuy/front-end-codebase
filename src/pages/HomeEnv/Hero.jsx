@@ -56,7 +56,7 @@ function Hero() {
       </Box>
 
       <Image
-        src='/public/Image/HeroImg.png'
+        src='/Image/HeroImg.png'
         width={{ lg: '50%', md: '50%', sm: '0' }}
         display={{ lg: 'flex', md: 'none', sm: 'none' }}
       />
