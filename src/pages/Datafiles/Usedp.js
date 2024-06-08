@@ -1,6 +1,6 @@
 export const UsedProductData = [
   {
-    image: "/public/Image/Images.png",
+    image: "/Image/Images.png",
     text: "Product name - details",
     text2: "$100",
 
@@ -9,7 +9,7 @@ export const UsedProductData = [
   },
 
   {
-    image: "/public/Image/Images.png",
+    image: "/Image/Images.png",
     text: "Product name - details",
     text2: "$100",
 
@@ -18,7 +18,7 @@ export const UsedProductData = [
   },
 
   {
-    image: "/public/Image/Images.png",
+    image: "/Image/Images.png",
     text: "Product name - details",
     text2: "$100",
 
@@ -27,7 +27,7 @@ export const UsedProductData = [
   },
 
   {
-    image: "/public/Image/Images.png",
+    image: "/Image/Images.png",
     text: "Product name - details",
     text2: "$100",
 
