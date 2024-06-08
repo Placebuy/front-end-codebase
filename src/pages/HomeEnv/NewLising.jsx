@@ -63,10 +63,15 @@ function NewLising() {
                   {text2}
                 </Text>
                 <ButtonGroup display="flex" justifyContent='space-between' gap={3} mt={2}>
-                  <Button colorScheme='orange'>
+                  <Button colorScheme='orange'
+                  fontSize={{lg:'', sm:'10px'}}
+                  >
                     {Button1}
                   </Button>
-                  <Button>
+
+                  <Button
+                    fontSize={{ lg: '', sm: '10px' }}
+                  >
                     {Button2}
                   </Button>
                 </ButtonGroup>
