@@ -6,7 +6,8 @@ import NewLising from './NewLising';
 import UsedP from './UsedP';
 import UsedP2 from './UsedP2';
 import AfterUse from './AfterUse';
-// import Footer from '../../component/Footer';
+
+import AppFooter from '../../component/AppFooter';
 import DownToTop from '../../component/DownToTop';
 
 
@@ -24,7 +25,7 @@ function Home() {
       <AfterUse />
       
       <DownToTop />
-      {/* <Footer /> */}
+      <AppFooter />
     </>
   );
 }

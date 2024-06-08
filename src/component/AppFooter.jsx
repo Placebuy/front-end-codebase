@@ -4,7 +4,7 @@ import 'bootstrap/dist/css/bootstrap.css';
 import 'bootstrap-icons/font/bootstrap-icons.css';
 import React from 'react';
 
-function Footer() {
+function AppFooter() {
   return (
     <Box as="footer" mt={10} backgroundColor="black" width="100%">
       <Box
@@ -87,4 +87,4 @@ function Footer() {
   );
 }
 
-export default Footer;
+export default AppFooter;
