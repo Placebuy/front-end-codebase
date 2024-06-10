@@ -89,7 +89,7 @@ function Signup() {
             mb={4}
           >
             <Image
-              src="/public/Image/svg/google-color.svg"
+              src="/Image/svg/google-color.svg"
               width={6}
               mr={2}
             />
