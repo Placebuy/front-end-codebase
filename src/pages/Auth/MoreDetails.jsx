@@ -33,7 +33,7 @@ function MoreDetails() {
           mt={8}
           mb={10}
         >
-          Few More detaols and you can continue <br/> to the market place 
+          Few More details and you can continue <br/> to the market place 
         </Text>
 
         <FormControl
