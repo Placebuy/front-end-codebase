@@ -7,7 +7,7 @@ function Hero() {
       <Box
       backgroundImage="linear-gradient(to bottom, rgba(227, 86, 58, 1), rgba(227, 86, 58, 0.05))"
         height={{lg:"508px", md:"400px", sm: "380px"}}
-      width="100%"
+        width="100%"
       >
         <Flex
       display='flex'
@@ -15,6 +15,7 @@ function Hero() {
       margin="auto"
       alignItems={{ sm: 'center' }}
       justifyContent={{ sm: 'center' }}
+    
     >
       <Box
         ml={{ lg: '50px', md: '50px', sm: '0' }}
@@ -55,9 +56,10 @@ function Hero() {
         </Button>
       </Box>
 
-      <Image
+          <Image
+            mt={20}
         src='/Image/HeroImg.png'
-        width={{ lg: '50%', md: '50%', sm: '0' }}
+        width={{ lg: '40%', md: '45%', sm: 'none' }}
         display={{ lg: 'flex', md: 'none', sm: 'none' }}
       />
     </Flex>
