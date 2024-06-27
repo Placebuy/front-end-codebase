@@ -99,41 +99,45 @@ const Nav = () => {
       </Box>
 
       {/* Mobile Responsive Content */}
-      <Flex align='center' gap={200} display={{ sm: 'flex', md: 'flex', lg: 'none', xl: 'none' }}>
-        <Flex align='center' gap={10}>
-          <InputGroup>
-            <Input
-              placeholder="Search"
-              variant="outline"
-              size="md"
-              colorScheme='orange'
-            />
-            <InputRightElement pointerEvents="none">
-              <i className="bi bi-search"></i>
-            </InputRightElement>
-          </InputGroup>
-          
-          <Box fontSize={20}>
-            <i className="bi bi-cart"></i>
-          </Box>
-        </Flex>
-        
-        <Flex align='center' gap={2}>
-          <IconButton
-            aria-label='open Menu'
-            size="lg"
-            mr={2}
-            icon={<HamburgerIcon />}
-            onClick={() => setDisplay('flex')}
-          />
-          
-          <IconButton
-            icon={isDark ? <SunIcon /> : <MoonIcon />}
-            aria-label="Toggle Theme"
-            onClick={toggleColorMode}
-          />
-        </Flex>
-      </Flex>
+      <Flex 
+  align='center' 
+  justifyContent='space-between' 
+  width='100%' 
+  px={4} 
+  display={{ sm: 'flex', md: 'flex', lg: 'none', xl: 'none' }}
+>
+  <InputGroup width='70%'>
+    <Input
+      placeholder="Search"
+      variant="outline"
+      size="md"
+      colorScheme='orange'
+    />
+    <InputRightElement pointerEvents="none">
+      <i className="bi bi-search"></i>
+    </InputRightElement>
+  </InputGroup>
+  
+  <Box display='flex' alignItems='center' gap={4}>
+    <Box fontSize={20}>
+      <i className="bi bi-cart"></i>
+    </Box>
+    
+    <IconButton
+      aria-label='open Menu'
+      size="lg"
+      icon={<HamburgerIcon />}
+      onClick={() => setDisplay('flex')}
+    />
+    
+    <IconButton
+      icon={isDark ? <SunIcon /> : <MoonIcon />}
+      aria-label="Toggle Theme"
+      onClick={toggleColorMode}
+    />
+  </Box>
+</Flex>
+
 
       {/* Responsive Navigation */}
       <Flex
