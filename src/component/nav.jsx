@@ -10,7 +10,6 @@ import {
   useMediaQuery,
   IconButton,
   useColorMode,
-  Center
 } from '@chakra-ui/react';
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
@@ -21,7 +20,6 @@ const Nav = () => {
   const isDark = colorMode === 'dark';
 
   const [isLargerThan768] = useMediaQuery('(min-width: 768px)');
-
   const [display, setDisplay] = useState('none');
   
   return (
@@ -69,23 +67,17 @@ const Nav = () => {
           </InputRightElement>
         </InputGroup>
 
-        <Button
-          variant='outline'
-          p={5}
-        >
+        <Button variant='outline' p={5}>
           Categories
           <i className="bi bi-arrow-down-short"></i>
         </Button>
       </Box>
 
-      
-
       <Box
-        // display='flex'
+        display={{ sm: 'none', md: 'none', lg: 'flex', xl: 'flex' }}
         gap={5}
         mr={isLargerThan768 ? 20 : 0}
         mt={isLargerThan768 ? 0 : 3}
-           display={{ sm: 'none', md: 'none', lg: 'flex', xl: 'flex' }}
       >
         <Box fontSize={30}>
           <i className="bi bi-cart"></i>
@@ -101,80 +93,49 @@ const Nav = () => {
           </Link>
         </Text> 
         
-        <Button
-          colorScheme='orange'
-          variant='solid'
-          pl={10}
-          pr={10}
-        >
+        <Button colorScheme='orange' variant='solid' pl={10} pr={10}>
           Sell
         </Button>
       </Box>
 
-
-      {/* Mobile Responsive COntent */}
-
-      <Flex
-        align='center'
-        gap={200}
-      >
-
-        <Flex
-          align='center'
-          gap={10}
-        >
-        <InputGroup
-          display={{ sm: 'flex', md: 'flex', lg: 'none', xl: 'none' }}
-          w={"50vw"}
-      >
-          <Input
-            placeholder="Search"
-            variant="outline"
-            size="md"
-            colorScheme='orange'
-          />
-          <InputRightElement pointerEvents="none">
-            <i className="bi bi-search"></i>
-          </InputRightElement>
-        </InputGroup>
-        
-         <Box fontSize={20}>
-          <i className="bi bi-cart"></i>
-        </Box>  
+      {/* Mobile Responsive Content */}
+      <Flex align='center' gap={200} display={{ sm: 'flex', md: 'flex', lg: 'none', xl: 'none' }}>
+        <Flex align='center' gap={10}>
+          <InputGroup>
+            <Input
+              placeholder="Search"
+              variant="outline"
+              size="md"
+              colorScheme='orange'
+            />
+            <InputRightElement pointerEvents="none">
+              <i className="bi bi-search"></i>
+            </InputRightElement>
+          </InputGroup>
+          
+          <Box fontSize={20}>
+            <i className="bi bi-cart"></i>
+          </Box>
         </Flex>
         
-        <Flex
-          align='center'
-          gap={2}
-        >
+        <Flex align='center' gap={2}>
           <IconButton
-        aria-label='open Menu'
-        size="lg"
-        mr={2}
-        icon={<HamburgerIcon />}
-        display={{ sm: 'flex', md: 'flex', lg: 'none', xl: 'none' }}
-        onClick={() => setDisplay('flex')}
-      />
-      
-      <IconButton
-        // position="fixed"
-        // top={4}
-        // right={4}
-        icon={isDark ? <SunIcon /> : <MoonIcon />}
-        aria-label="Toggle Theme"
-        // colorScheme="green"
-        onClick={toggleColorMode}
-      />
+            aria-label='open Menu'
+            size="lg"
+            mr={2}
+            icon={<HamburgerIcon />}
+            onClick={() => setDisplay('flex')}
+          />
           
+          <IconButton
+            icon={isDark ? <SunIcon /> : <MoonIcon />}
+            aria-label="Toggle Theme"
+            onClick={toggleColorMode}
+          />
+        </Flex>
       </Flex>
-      
 
-      </Flex>
-      
-
-      
-
-      {/* RESPONSIVE NAV */}
+      {/* Responsive Navigation */}
       <Flex
         w="100vw"
         bgColor="gray.50"
@@ -210,12 +171,7 @@ const Nav = () => {
             </Link>
           </Text>
 
-          <Button
-            colorScheme='orange'
-            variant='solid'
-            pl={10}
-            pr={10}
-          >
+          <Button colorScheme='orange' variant='solid' pl={10} pr={10}>
             <Link to='/Login'>
               Sign In
             </Link>
