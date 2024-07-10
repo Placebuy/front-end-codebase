@@ -10,6 +10,7 @@ import {
   useMediaQuery,
   IconButton,
   useColorMode,
+  useColorModeValue,
 } from '@chakra-ui/react';
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
@@ -21,27 +22,33 @@ const Nav = () => {
 
   const [isLargerThan768] = useMediaQuery('(min-width: 768px)');
   const [display, setDisplay] = useState('none');
-  
+
+  // Dynamic text and background colors
+  const textColor = useColorModeValue('black', 'white');
+  const bgColor = useColorModeValue('white', 'gray.800');
+  const linkHoverColor = useColorModeValue('teal.500', 'teal.300');
+
   return (
     <Flex
       flexDirection={isLargerThan768 ? 'row' : 'column'}
       justifyContent={isLargerThan768 ? 'space-evenly' : 'center'}
       alignItems='center'
       w='100%'
-      backgroundColor='white'
+      backgroundColor={bgColor}
       pos="fixed"
       pt={2}
       pb={2}
+      zIndex={1000}
     >
       <Box
         ml={isLargerThan768 ? 60 : 0}
         mb={isLargerThan768 ? 0 : 3}
-        display={{ sm: 'none', md: 'none', lg: 'flex', xl: 'flex' }}
+        display={{ base: 'none', lg: 'flex' }}
       >
         <Link to='/'>
           <Image
-            src='/Image/Placebuy_Logo.png'
-            width={'50px'}
+            src='/Image/Placebuy_Horizontal.png'
+            width={'100px'}
           />
         </Link>
       </Box>
@@ -50,8 +57,8 @@ const Nav = () => {
         maxW="lg"
         mx="auto"
         mt={isLargerThan768 ? 2 : 3}
-        display={{ sm: 'none', md: 'none', lg: 'flex', xl: 'flex' }}
-        flexDirection={isLargerThan768 ? 'row' : 'column'}
+        display={{ base: 'none', lg: 'flex' }}
+        flexDirection='row'
         gap={5}
         alignItems='center'
       >
@@ -74,19 +81,20 @@ const Nav = () => {
       </Box>
 
       <Box
-        display={{ sm: 'none', md: 'none', lg: 'flex', xl: 'flex' }}
+        display={{ base: 'none', lg: 'flex' }}
         gap={5}
         mr={isLargerThan768 ? 20 : 0}
         mt={isLargerThan768 ? 0 : 3}
+        alignItems='center'
       >
         <Box fontSize={30}>
           <i className="bi bi-cart"></i>
         </Box>
         
-        <Text mt={3}>
+        <Text mt={3} color={textColor}>
           <Link
             to='/Login'
-            style={{ color: "teal.500" }}
+            style={{ color: linkHoverColor }}
             _hover={{ textDecoration: 'underline' }}
           >
             Sign In
@@ -96,53 +104,53 @@ const Nav = () => {
         <Button colorScheme='orange' variant='solid' pl={10} pr={10}>
           Sell
         </Button>
+        
+        {/* Color Mode Toggle */}
+        <IconButton
+          icon={isDark ? <SunIcon /> : <MoonIcon />}
+          aria-label="Toggle Theme"
+          onClick={toggleColorMode}
+        />
       </Box>
 
       {/* Mobile Responsive Content */}
       <Flex 
-  align='center' 
-  justifyContent='space-between' 
-  width='100%' 
-  px={4} 
-  display={{ sm: 'flex', md: 'flex', lg: 'none', xl: 'none' }}
->
-  <InputGroup width='70%'>
-    <Input
-      placeholder="Search"
-      variant="outline"
-      size="md"
-      colorScheme='orange'
-    />
-    <InputRightElement pointerEvents="none">
-      <i className="bi bi-search"></i>
-    </InputRightElement>
-  </InputGroup>
-  
-  <Box display='flex' alignItems='center' gap={4}>
-    <Box fontSize={20}>
-      <i className="bi bi-cart"></i>
-    </Box>
-    
-    <IconButton
-      aria-label='open Menu'
-      size="lg"
-      icon={<HamburgerIcon />}
-      onClick={() => setDisplay('flex')}
-    />
-    
-    <IconButton
-      icon={isDark ? <SunIcon /> : <MoonIcon />}
-      aria-label="Toggle Theme"
-      onClick={toggleColorMode}
-    />
-  </Box>
-</Flex>
-
+        align='center' 
+        justifyContent='space-between' 
+        width='100%' 
+        px={4} 
+        display={{ base: 'flex', lg: 'none' }}
+      >
+        <InputGroup width='70%'>
+          <Input
+            placeholder="Search"
+            variant="outline"
+            size="md"
+            colorScheme='orange'
+          />
+          <InputRightElement pointerEvents="none">
+            <i className="bi bi-search"></i>
+          </InputRightElement>
+        </InputGroup>
+        
+        <Box display='flex' alignItems='center' gap={4}>
+          <Box fontSize={20}>
+            <i className="bi bi-cart"></i>
+          </Box>
+          
+          <IconButton
+            aria-label='open Menu'
+            size="lg"
+            icon={<HamburgerIcon />}
+            onClick={() => setDisplay('flex')}
+          />
+        </Box>
+      </Flex>
 
       {/* Responsive Navigation */}
       <Flex
         w="100vw"
-        bgColor="gray.50"
+        bgColor={bgColor}
         zIndex={20}
         h="50vh"
         pos="fixed"
@@ -163,13 +171,13 @@ const Nav = () => {
         </Flex>
 
         <Flex flexDir="column" align="center">
-          <Text mt={3}>
+          <Text mt={3} color={textColor}>
             <Link to='/'>
               Home
             </Link>
           </Text> 
         
-          <Text mt={3}>
+          <Text mt={3} color={textColor}>
             <Link to='/'>
               About Us
             </Link>
