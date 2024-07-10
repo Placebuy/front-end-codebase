@@ -1,9 +1,13 @@
-import { Box, Image, Text, SimpleGrid, IconButton, Icon, ButtonGroup, Button, Divider } from '@chakra-ui/react'
+import { Box, Image, Text, SimpleGrid, IconButton, Icon, ButtonGroup, Button, Divider, useColorModeValue } from '@chakra-ui/react'
 import { AiFillStar, AiOutlineStar } from "react-icons/ai";
 import { ProductData } from '../Datafiles/NewLising';
 import React from 'react'
 
 function NewLising() {
+
+  const textColor = useColorModeValue('black', 'white');
+  const bgColor = useColorModeValue('gray.50', 'gray.800');
+  const heroBgColor = useColorModeValue('#FAFAFA', 'gray.700');
 
 
   return (
@@ -39,7 +43,7 @@ function NewLising() {
             />
 
             <Box
-              backgroundColor='white'
+              bgColor={heroBgColor}
               borderRadius={20}
               pos='relative'
               top='-10'
@@ -56,11 +60,19 @@ function NewLising() {
               </Box>
               
               <Box ml={5}>
-                <Text as='p' mb={2} fontSize={{ lg: '15px', sm: '15px' }}>
+                <Text
+                  as='p'
+                  mb={2}
+                  fontSize={{ lg: '15px', sm: '15px' }}
+                  color={textColor}
+                >
                   {text}
                 </Text>
-                <Text as='p'>
-                  {text2}
+               
+                <Text as='p'
+                color={textColor}
+                >
+                  {text2}   
                 </Text>
                 <ButtonGroup display="flex" justifyContent='space-between' gap={3} mt={2}>
                   <Button colorScheme='orange'

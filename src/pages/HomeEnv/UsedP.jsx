@@ -1,9 +1,14 @@
-import { Box, Image, Text, SimpleGrid, Icon, ButtonGroup, Button, Divider } from '@chakra-ui/react'
+import { Box, Image, Text, SimpleGrid, Icon, ButtonGroup, Button, Divider, useColorModeValue } from '@chakra-ui/react'
 import { AiFillStar, AiOutlineStar } from "react-icons/ai";
 import { UsedProductData } from '../Datafiles/Usedp';
 import React from 'react'
 
 function UsedP() {
+
+   const textColor = useColorModeValue('black', 'white');
+  const bgColor = useColorModeValue('gray.50', 'gray.800');
+  const heroBgColor = useColorModeValue('#FAFAFA', 'gray.700');
+
   return (
     <>
       <Box
@@ -37,7 +42,7 @@ function UsedP() {
             />
 
             <Box
-              backgroundColor='white'
+              bgColor={heroBgColor}
               borderRadius={20}
               pos='relative'
               top='-10'
@@ -54,10 +59,17 @@ function UsedP() {
               </Box>
               
               <Box ml={5}>
-                <Text as='p' mb={2} fontSize={{ lg: '15px', sm: '15px' }}>
+                <Text as='p'
+                  mb={2}
+                  fontSize={{ lg: '15px', sm: '15px' }}
+                  color={textColor}
+                >
                   {text}
                 </Text>
-                <Text as='p'>
+
+                <Text as='p'
+                color={textColor}
+                >
                   {text2}
                 </Text>
                 <ButtonGroup display="flex" justifyContent='space-between' gap={3} mt={2}>

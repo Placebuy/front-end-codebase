@@ -1,8 +1,14 @@
-import { Box, Text, Button } from '@chakra-ui/react'
+import { Box, Text, Button,useColorModeValue } from '@chakra-ui/react'
 import React from 'react'
 import { Link } from 'react-router-dom'
 
 function AfterUse() {
+
+  const textColor = useColorModeValue('black', 'white');
+  const StextColor = useColorModeValue ('black')
+  const bgColor = useColorModeValue('gray.50', 'gray.800');
+  const heroBgColor = useColorModeValue('#FAFAFA', 'gray.700');
+
   return (
     <>
       <Box
@@ -14,6 +20,7 @@ function AfterUse() {
         backgroundPosition="center"
         backgroundRepeat="no-repeat"
         backgroundSize="cover"
+
       >
 
         <Box
@@ -29,11 +36,13 @@ function AfterUse() {
             m='6%'
           >
 
-            <Text as='h1'>
+            <Text as='h1'
+            color={'black'}
+            >
             Become a Vendor on Placebuy 
           </Text>
 
-          <Text as='p'>
+          <Text as='p' color={'black'}>
             Sell your product to students across universities with placebuy 
           </Text>
 
