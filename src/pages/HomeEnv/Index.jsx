@@ -15,6 +15,7 @@ import DownToTop from '../../component/DownToTop';
 function Home() {
   return (
     <>
+      
       <Nav />
       {/* <Sidebarnav /> */}
 
