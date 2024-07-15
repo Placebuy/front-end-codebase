@@ -87,6 +87,17 @@ function login() {
               </Link>
               </a>
           </Text>
+
+          <Text
+            mt={10}
+           _hover={{ textDecoration: 'underline', color: 'orange' }}
+          >
+            <Link to='/'
+              pl={5}
+              fontWeight='200'
+            > Back to Home
+            </Link>
+          </Text>
         </Box>
       </Box>
     </Box>

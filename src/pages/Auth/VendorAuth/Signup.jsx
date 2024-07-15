@@ -3,7 +3,7 @@ import { Box, Text, FormControl, Input, Button, Image } from '@chakra-ui/react';
 import 'bootstrap-icons/font/bootstrap-icons.css';
 import { Link } from 'react-router-dom';
 
-function Signup() {
+function VendorSignup() {
   return (
     <Box
       height="100vh"
@@ -107,7 +107,7 @@ function Signup() {
               </Link>
               </a>
           </Text>
-          <Text
+           <Text
             mt={10}
            _hover={{ textDecoration: 'underline', color: 'orange' }}
           >
@@ -123,4 +123,4 @@ function Signup() {
   );
 }
 
-export default Signup;
+export default VendorSignup;

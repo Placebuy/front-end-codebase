@@ -9,11 +9,11 @@ function AppFooter() {
     <Box as="footer" mt={10} backgroundColor="black" width="100%">
       <Box
         display="flex"
-        flexDirection={{ lg: 'row', sm: 'column' }}
+        flexDirection={{ base: 'column', lg: 'row' }}
         justifyContent="center"
-        padding={20}
+        padding={{ base: 10, lg: 20 }}
       >
-        <Box width={{ lg: '50%', sm: '100%' }}>
+        <Box width={{ base: '100%', lg: '50%' }} mb={{ base: 10, lg: 0 }}>
           <Link to="/">
             <Image src="/Image/Placebuy_Logo.png" width="50px" />
           </Link>
@@ -22,7 +22,7 @@ function AppFooter() {
             An online platform where higher institute students in Nigeria can sell their products both used and brand-new products. This platform connects buyers and sellers of higher institutes.
           </Text>
 
-          <Box color="orange" display="flex" gap={2} fontSize="20px" mb={5}>
+          <Box color="orange" display="flex" gap={2} fontSize="20px" mt={5}>
             <i className="bi bi-google"></i>
             <i className="bi bi-twitter"></i>
             <i className="bi bi-facebook"></i>
@@ -30,13 +30,13 @@ function AppFooter() {
         </Box>
 
         <Box
-          ml={{ lg: '20', sm: '0' }}
           display="flex"
-          flexDirection={{ lg: 'row', sm: 'column' }}
-          gap={{ lg: '20', sm: '5' }}
+          flexDirection={{ base: 'column', lg: 'row' }}
+          gap={{ base: 10, lg: 20 }}
+          ml={{ lg: '20', base: '0' }}
         >
           <Box>
-            <Text as="h5" color="white">
+            <Text as="h5" color="white" mb={2}>
               Shop
             </Text>
             <Text as="p" color="white">
@@ -53,7 +53,7 @@ function AppFooter() {
             </Text>
           </Box>
           <Box>
-            <Text as="h5" color="white">
+            <Text as="h5" color="white" mb={2}>
               Sell on PlaceBuy
             </Text>
             <Text as="p" color="white">
@@ -71,7 +71,7 @@ function AppFooter() {
           </Box>
 
           <Box>
-            <Text as="h5" color="white">
+            <Text as="h5" color="white" mb={2}>
               Contact
             </Text>
             <Text as="p" color="orange">
